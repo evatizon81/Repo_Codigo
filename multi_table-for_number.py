@@ -1,17 +1,9 @@
-8 kyu
-Multiplication table for number
-Scala:
-def multiTable(n: Int): String = 
-  var multiplo: Int = 1
-  var tabla: String = ""
+def multi_table(multiplicando): 
 
-  while 
-      multiplo <= 10
-  do 
-    tabla = tabla + s"$multiplo * $n = ${multiplo*n}"
-    if multiplo < 10 then
-      tabla = tabla + "\n"
-    multiplo = multiplo + 1
-
-  tabla
+    tabla_de_multiplicar = ""
     
+    for multiplicador in range(1, 11):
+        tabla_de_multiplicar += f"{multiplicador} * {multiplicando} = {multiplicador * multiplicando}\n"
+    return tabla_de_multiplicar[:-1]
+
+print (multi_table(5))
